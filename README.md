@@ -1,5 +1,5 @@
 <h1 align="center">👋 Hi, I'm Aditya Singh</h1>
-<h3 align="center">💻 Passionate Front-End Developer | Creative Technologist | Gamer 🎮</h3>
+<h3 align="center">💻 Passionate Web Developer | Creative Technologist | Android Developer</h3>
 
 <p align="center">
   <a href="https://github.com/adityasinnghh"><img src="https://img.shields.io/github/followers/adityasinnghh?label=Follow&style=social" alt="GitHub Badge"/></a>
@@ -10,11 +10,11 @@
 ---
 
 ### 🚀 About Me
-- 🧠 Currently mastering **React.js**, **Next.js**, and **UI/UX design**
+- 🧠 Currently mastering **kotlim**, **Jetpack Compose**, and **UI/UX design**
 - 🎯 Focused on building **clean, fast, and responsive web experiences**
-- 🕹️ Creator of gaming & tech content on **YouTube**
-- 💬 Ask me about **front-end development**, **UI design**, and **modern web tools**
-- 🌱 Always learning something new — currently exploring **AI + Web Integration**
+
+- 💬 Ask me about **Full Stack development**, **UI design**, and **modern web tools**
+- 🌱 Always learning something new — currently exploring **Android Integration**
 
 ---
 
@@ -56,6 +56,7 @@
 - 🔗 **[YouTube Channel Tools](https://github.com/adityasinnghh/youtube-tools)** — Tools & resources for video creators
 
 ---
+
 
 ### 🏆 GitHub Trophies
 <p align="center">
