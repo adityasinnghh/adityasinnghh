@@ -43,18 +43,19 @@
 
 ---
 
-<h3 align="left">🐍 Contribution Snake</h3>
+<h3 align="center">🐍 Contribution Snake</h3>
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/adityasinnghh/adityasinnghh/output/snake-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/adityasinnghh/adityasinnghh/output/snake-light.svg" />
-    <img alt="GitHub Snake Animation" src="https://raw.githubusercontent.com/adityasinnghh/adityasinnghh/output/snake-dark.svg" />
+    <img alt="GitHub Snake Animation" src="https://raw.githubusercontent.com/adityasinnghh/adityasinnghh/output/snake-rainbow.svg" />
   </picture>
 </p>
 
-<p align="left">
+<p align="center">
   <img src="https://raw.githubusercontent.com/adityasinnghh/adityasinnghh/output/snake-rainbow.svg" alt="Rainbow Snake" />
+  <img src="https://raw.githubusercontent.com/adityasinnghh/adityasinnghh/output/snake.gif" alt="Animated GIF Snake" />
 </p>
 
 
