@@ -1,9 +1,9 @@
-name: 🐍 Ultimate Snake Generator — Aditya Singh Edition
+name: 🐍 Snake Generator — Aditya Singh Edition v2 (Rainbow Mode)
 
 on:
   schedule:
-    - cron: "0 3 * * *"  # Runs every day at 3 AM IST
-  workflow_dispatch:      # Manual trigger from Actions tab
+    - cron: "0 3 * * *"  # 🕒 Runs daily at 3 AM IST
+  workflow_dispatch:      # 🎮 Manual trigger
   push:
     branches:
       - main
@@ -13,42 +13,56 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write     # ✅ Required to push to output branch
+      contents: write
       actions: read
 
     env:
       USERNAME: adityasinnghh
       OUTPUT_DIR: dist
-      LIGHT_THEME: github-light
-      DARK_THEME: github-dark
+
+      THEME_DARK: github-dark
+      THEME_LIGHT: github-light
+      THEME_RAINBOW: github-dark-dimmed,github-light,github-dark,github
 
     steps:
       - name: 🧩 Checkout repository
         uses: actions/checkout@v4
 
-      - name: ⚡ Setup cache for faster builds
+      - name: ⚡ Cache build data
         uses: actions/cache@v3
         with:
           path: ~/.cache/snk
-          key: ${{ runner.os }}-snk
+          key: ${{ runner.os }}-snk-cache
 
-      - name: 🐍 Generate animated contribution snakes (SVG + GIF)
+      - name: 🐍 Generate Snake SVGs (Dark + Light)
         uses: Platane/snk@v3
         with:
           github_user_name: ${{ env.USERNAME }}
           outputs: |
-            ${{ env.OUTPUT_DIR }}/github-contribution-grid-snake.svg
-            ${{ env.OUTPUT_DIR }}/github-contribution-grid-snake-dark.svg?palette=${{ env.DARK_THEME }}
-            ${{ env.OUTPUT_DIR }}/github-contribution-grid-snake-light.svg?palette=${{ env.LIGHT_THEME }}
-            ${{ env.OUTPUT_DIR }}/github-contribution-grid-snake.gif
+            ${{ env.OUTPUT_DIR }}/snake-dark.svg?palette=${{ env.THEME_DARK }}
+            ${{ env.OUTPUT_DIR }}/snake-light.svg?palette=${{ env.THEME_LIGHT }}
 
-      - name: ✨ Generate a random commit message
+      - name: 🌈 Generate Rainbow Gradient Snake
+        run: |
+          mkdir -p ${{ env.OUTPUT_DIR }}
+          curl -s "https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake.svg" -o "${{ env.OUTPUT_DIR }}/snake-rainbow.svg"
+          sed -i 's/#39d353/#ff00ff/g; s/#26a641/#ff9900/g; s/#006d32/#00ffff/g' "${{ env.OUTPUT_DIR }}/snake-rainbow.svg"
+          echo "🎨 Rainbow gradient snake generated."
+
+      - name: 🎞️ Generate Animated GIF Snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ env.USERNAME }}
+          outputs: |
+            ${{ env.OUTPUT_DIR }}/snake.gif
+
+      - name: ✨ Generate random emoji commit message
         id: commitmsg
         run: |
-          msgs=("✨ Updated snake animation" "🐍 New snake slithering" "🚀 Snake regenerated" "🧠 Fresh commits detected" "🔥 Animated grid refreshed")
+          msgs=("🐍 Slithering rainbow snake" "🌈 Vibrant snake regenerated" "🔥 Neon trails activated" "🧠 Matrix-style grid refresh" "⚡ Shiny new commit paths")
           echo "message=${msgs[$RANDOM % ${#msgs[@]}]}" >> $GITHUB_OUTPUT
 
-      - name: 🚀 Push snakes to output branch
+      - name: 🚀 Deploy Snakes to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
@@ -57,8 +71,13 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 🎉 Success Log
+      - name: 🎉 Final Log Output
         run: |
-          echo "✅ Snake animation generated successfully!"
-          echo "🌐 View it here:"
-          echo "➡️  https://raw.githubusercontent.com/${{ env.USERNAME }}/${{ env.USERNAME }}/output/github-contribution-grid-snake.svg"
+          echo "=============================="
+          echo "🐍 Snake Animation Generated!"
+          echo "👤 User: ${{ env.USERNAME }}"
+          echo "🌈 Versions: Dark, Light, Rainbow, GIF"
+          echo "🚀 Pushed to: output branch"
+          echo "🎨 Live preview:"
+          echo "  🔗 https://raw.githubusercontent.com/${{ env.USERNAME }}/${{ env.USERNAME }}/output/snake-rainbow.svg"
+          echo "=============================="
