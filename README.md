@@ -43,7 +43,7 @@
 
 ---
 
-<h3 align="center">🐍 Contribution Snake</h3>
+### 🐍 Contribution Snake
 
 <p align="center">
   <picture>
