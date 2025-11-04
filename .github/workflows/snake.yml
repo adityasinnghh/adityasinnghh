@@ -1,34 +1,64 @@
-name: Generate Snake Animation
+name: 🐍 Ultimate Snake Generator — Aditya Singh Edition
 
 on:
   schedule:
-    - cron: "0 0 * * *"  # Runs every day at midnight
-  workflow_dispatch:      # Allows manual trigger
+    - cron: "0 3 * * *"  # Runs every day at 3 AM IST
+  workflow_dispatch:      # Manual trigger from Actions tab
   push:
     branches:
       - main
 
 jobs:
-  build:
+  build-snake:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write    # 👈 REQUIRED to push to output branch
+      contents: write     # ✅ Required to push to output branch
+      actions: read
+
+    env:
+      USERNAME: adityasinnghh
+      OUTPUT_DIR: dist
+      LIGHT_THEME: github-light
+      DARK_THEME: github-dark
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: 🧩 Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Generate snake animation
+      - name: ⚡ Setup cache for faster builds
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/snk
+          key: ${{ runner.os }}-snk
+
+      - name: 🐍 Generate animated contribution snakes (SVG + GIF)
         uses: Platane/snk@v3
         with:
-          github_user_name: adityasinnghh
-          outputs: dist/github-contribution-grid-snake.svg
+          github_user_name: ${{ env.USERNAME }}
+          outputs: |
+            ${{ env.OUTPUT_DIR }}/github-contribution-grid-snake.svg
+            ${{ env.OUTPUT_DIR }}/github-contribution-grid-snake-dark.svg?palette=${{ env.DARK_THEME }}
+            ${{ env.OUTPUT_DIR }}/github-contribution-grid-snake-light.svg?palette=${{ env.LIGHT_THEME }}
+            ${{ env.OUTPUT_DIR }}/github-contribution-grid-snake.gif
 
-      - name: Push generated snake.svg to output branch
+      - name: ✨ Generate a random commit message
+        id: commitmsg
+        run: |
+          msgs=("✨ Updated snake animation" "🐍 New snake slithering" "🚀 Snake regenerated" "🧠 Fresh commits detected" "🔥 Animated grid refreshed")
+          echo "message=${msgs[$RANDOM % ${#msgs[@]}]}" >> $GITHUB_OUTPUT
+
+      - name: 🚀 Push snakes to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
-          build_dir: dist
+          build_dir: ${{ env.OUTPUT_DIR }}
+          commit_message: ${{ steps.commitmsg.outputs.message }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🎉 Success Log
+        run: |
+          echo "✅ Snake animation generated successfully!"
+          echo "🌐 View it here:"
+          echo "➡️  https://raw.githubusercontent.com/${{ env.USERNAME }}/${{ env.USERNAME }}/output/github-contribution-grid-snake.svg"
