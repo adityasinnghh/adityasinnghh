@@ -1,8 +1,8 @@
-name: 🐍 Generate Cyberpunk Snake
+name: 🐍 Generate Cyber-Neon Snake
 
 on:
   schedule:
-    - cron: "0 */6 * * *" # every 6 hours
+    - cron: "0 */12 * * *" # Runs every 12 hours
   workflow_dispatch:
   push:
     branches:
@@ -10,66 +10,65 @@ on:
 
 jobs:
   build:
-    name: 🐍 Build Snake Animation
+    name: ⚡ Generate Snake Animation
     runs-on: ubuntu-latest
 
     steps:
       - name: 🧩 Checkout Repository
         uses: actions/checkout@v4
 
-      - name: 🏗️ Setup Environment
-        run: |
-          echo "USERNAME=${GITHUB_REPOSITORY_OWNER}" >> $GITHUB_ENV
-          echo "OUTPUT_DIR=dist" >> $GITHUB_ENV
-          echo "BUILD_DIR=build" >> $GITHUB_ENV
+      - name: 🧠 Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
 
-      - name: 🐍 Generate Base Snake SVGs
+      - name: ⚙️ Generate Snake SVG
         uses: Platane/snk@v3
         with:
-          github_user_name: ${{ env.USERNAME }}
+          github_user_name: adityasinnghh
           outputs: |
-            ${{ env.OUTPUT_DIR }}/snake.svg
-            ${{ env.OUTPUT_DIR }}/snake-dark.svg?palette=github-dark
-            ${{ env.OUTPUT_DIR }}/snake-light.svg?palette=github-light
+            output/github-contribution-grid-snake.svg
+            output/github-contribution-grid-snake-dark.svg?palette=github-dark
+            output/github-contribution-grid-snake-light.svg?palette=github-light
 
-      - name: 🪄 Create Cyberpunk Rainbow Glow Version
+      - name: 🎨 Apply Cyber-Neon Glow Effect
         run: |
-          echo "🎨 Applying neon glow gradient to the snake..."
-          
-          # Create writable build directory
-          mkdir -p $BUILD_DIR
-          
-          # Copy read-only SVG to writable location
-          cp dist/snake.svg $BUILD_DIR/snake-rainbow.svg || true
+          echo "⚙️ Applying cyber-neon gradient..."
+          mkdir -p dist
+          cp output/github-contribution-grid-snake.svg dist/snake-rainbow.svg
 
-          # Apply glowing neon theme
-          sed -i \
-            -e 's/#39d353/#ff00ff/g' \
-            -e 's/#26a641/#00ffff/g' \
-            -e 's/#006d32/#9400ff/g' \
-            -e 's/stroke="#40c463"/stroke="url(#neonGradient)"/g' \
-            "$BUILD_DIR/snake-rainbow.svg"
+          # Make sure file is editable
+          chmod +w dist/snake-rainbow.svg
 
-          # Inject animated gradient definition
-          sed -i '1i\
-          <defs>\
-            <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%">\
-              <stop offset="0%" stop-color="#00ffff">\
-                <animate attributeName="stop-color" values="#00ffff;#ff00ff;#00ffff" dur="4s" repeatCount="indefinite"/>\
-              </stop>\
-              <stop offset="100%" stop-color="#ff00ff">\
-                <animate attributeName="stop-color" values="#ff00ff;#00ffff;#ff00ff" dur="4s" repeatCount="indefinite"/>\
-              </stop>\
-            </linearGradient>\
-          </defs>' "$BUILD_DIR/snake-rainbow.svg"
+          # Safely insert the neon <defs> inside the <svg> tag
+          awk '
+            BEGIN { inserted=0 }
+            /<svg[^>]*>/ {
+              print
+              print "  <defs>"
+              print "    <linearGradient id=\"neonGradient\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"0%\">"
+              print "      <stop offset=\"0%\" stop-color=\"#00ffff\">"
+              print "        <animate attributeName=\"stop-color\" values=\"#00ffff;#ff00ff;#00ffff\" dur=\"4s\" repeatCount=\"indefinite\" />"
+              print "      </stop>"
+              print "      <stop offset=\"100%\" stop-color=\"#ff00ff\">"
+              print "        <animate attributeName=\"stop-color\" values=\"#ff00ff;#00ffff;#ff00ff\" dur=\"4s\" repeatCount=\"indefinite\" />"
+              print "      </stop>"
+              print "    </linearGradient>"
+              print "  </defs>"
+              inserted=1
+              next
+            }
+            { print }
+            END { if (inserted==0) print "</svg>" }
+          ' output/github-contribution-grid-snake.svg > dist/snake-rainbow.svg.tmp
 
-          echo "⚡ Cyberpunk neon gradient applied successfully!"
-          ls -la $BUILD_DIR
+          mv dist/snake-rainbow.svg.tmp dist/snake-rainbow.svg
+          echo "✅ Cyber-neon gradient applied cleanly!"
 
-      - name: 🚀 Deploy Snake to GitHub Pages
+      - name: 🚀 Deploy Animated Snakes to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
-          build_dir: build
+          build_dir: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
