@@ -1,74 +1,64 @@
-name: 🐍 Generate Cyber-Neon Snake
+name: 🐍 Ultimate Snake Generator — Aditya Singh Edition
 
 on:
   schedule:
-    - cron: "0 */12 * * *" # Runs every 12 hours
-  workflow_dispatch:
+    - cron: "0 3 * * *"  # Runs every day at 3 AM IST
+  workflow_dispatch:      # Manual trigger from Actions tab
   push:
     branches:
       - main
 
 jobs:
-  build:
-    name: ⚡ Generate Snake Animation
+  build-snake:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write     # ✅ Required to push to output branch
+      actions: read
+
+    env:
+      USERNAME: adityasinnghh
+      OUTPUT_DIR: dist
+      LIGHT_THEME: github-light
+      DARK_THEME: github-dark
+
     steps:
-      - name: 🧩 Checkout Repository
+      - name: 🧩 Checkout repository
         uses: actions/checkout@v4
 
-      - name: 🧠 Setup Python
-        uses: actions/setup-python@v5
+      - name: ⚡ Setup cache for faster builds
+        uses: actions/cache@v3
         with:
-          python-version: 3.x
+          path: ~/.cache/snk
+          key: ${{ runner.os }}-snk
 
-      - name: ⚙️ Generate Snake SVG
+      - name: 🐍 Generate animated contribution snakes (SVG + GIF)
         uses: Platane/snk@v3
         with:
-          github_user_name: adityasinnghh
+          github_user_name: ${{ env.USERNAME }}
           outputs: |
-            output/github-contribution-grid-snake.svg
-            output/github-contribution-grid-snake-dark.svg?palette=github-dark
-            output/github-contribution-grid-snake-light.svg?palette=github-light
+            ${{ env.OUTPUT_DIR }}/github-contribution-grid-snake.svg
+            ${{ env.OUTPUT_DIR }}/github-contribution-grid-snake-dark.svg?palette=${{ env.DARK_THEME }}
+            ${{ env.OUTPUT_DIR }}/github-contribution-grid-snake-light.svg?palette=${{ env.LIGHT_THEME }}
+            ${{ env.OUTPUT_DIR }}/github-contribution-grid-snake.gif
 
-      - name: 🎨 Apply Cyber-Neon Glow Effect
+      - name: ✨ Generate a random commit message
+        id: commitmsg
         run: |
-          echo "⚙️ Applying cyber-neon gradient..."
-          mkdir -p dist
-          cp output/github-contribution-grid-snake.svg dist/snake-rainbow.svg
+          msgs=("✨ Updated snake animation" "🐍 New snake slithering" "🚀 Snake regenerated" "🧠 Fresh commits detected" "🔥 Animated grid refreshed")
+          echo "message=${msgs[$RANDOM % ${#msgs[@]}]}" >> $GITHUB_OUTPUT
 
-          # Make sure file is editable
-          chmod +w dist/snake-rainbow.svg
-
-          # Safely insert the neon <defs> inside the <svg> tag
-          awk '
-            BEGIN { inserted=0 }
-            /<svg[^>]*>/ {
-              print
-              print "  <defs>"
-              print "    <linearGradient id=\"neonGradient\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"0%\">"
-              print "      <stop offset=\"0%\" stop-color=\"#00ffff\">"
-              print "        <animate attributeName=\"stop-color\" values=\"#00ffff;#ff00ff;#00ffff\" dur=\"4s\" repeatCount=\"indefinite\" />"
-              print "      </stop>"
-              print "      <stop offset=\"100%\" stop-color=\"#ff00ff\">"
-              print "        <animate attributeName=\"stop-color\" values=\"#ff00ff;#00ffff;#ff00ff\" dur=\"4s\" repeatCount=\"indefinite\" />"
-              print "      </stop>"
-              print "    </linearGradient>"
-              print "  </defs>"
-              inserted=1
-              next
-            }
-            { print }
-            END { if (inserted==0) print "</svg>" }
-          ' output/github-contribution-grid-snake.svg > dist/snake-rainbow.svg.tmp
-
-          mv dist/snake-rainbow.svg.tmp dist/snake-rainbow.svg
-          echo "✅ Cyber-neon gradient applied cleanly!"
-
-      - name: 🚀 Deploy Animated Snakes to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v4
+      - name: 🚀 Push snakes to output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
-          build_dir: dist
+          build_dir: ${{ env.OUTPUT_DIR }}
+          commit_message: ${{ steps.commitmsg.outputs.message }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 🎉 Success Log
+        run: |
+          echo "✅ Snake animation generated successfully!"
+          echo "🌐 View it here:"
+          echo "➡️  https://raw.githubusercontent.com/${{ env.USERNAME }}/${{ env.USERNAME }}/output/github-contribution-grid-snake.svg"
