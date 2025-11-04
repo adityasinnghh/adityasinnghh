@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src=https://readme-typing-svg.demolab.com?font=Fira+Code&size=25&pause=1000&color=3FBBF7&width=435&lines=HI%2C+I+am+Aditya+Singhalt=alt="Typing SVG"/>
+  <img src=https://readme-typing-svg.demolab.com?font=Fira+Code&size=25&pause=1000&color=00FFFF&width=435&lines=Hi%2C+I+am+Aditya+Singh&color=00FFFF;00FFAA;00FFD1;00FFFF "Typing SVG"/>
 
 <h3 align="center">💻 Passionate Web Developer | Creative Technologist | Android Developer</h3>
 
