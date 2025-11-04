@@ -54,7 +54,8 @@
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/adityasinnghh/adityasinnghh/output/snake-rainbow.svg" alt="Rainbow Snake" />
+ <img src="https://github.com/adityasinnghh/adityasinnghh/blob/output/snake-rainbow.svg" alt="Cyberpunk Snake Animation" />
+
   <img src="https://raw.githubusercontent.com/adityasinnghh/adityasinnghh/output/snake.gif" alt="Animated GIF Snake" />
 </p>
 
