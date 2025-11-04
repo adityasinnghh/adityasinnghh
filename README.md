@@ -10,7 +10,7 @@
 ---
 
 ### 🚀 About Me
-- 🧠 Currently mastering **kotlim**, **Jetpack Compose**, and **UI/UX design**
+- 🧠 Currently mastering **kotlin**, **Jetpack Compose**, and **UI/UX design**
 - 🎯 Focused on building **clean, fast, and responsive web experiences**
 
 - 💬 Ask me about **Full Stack development**, **UI design**, and **modern web tools**
