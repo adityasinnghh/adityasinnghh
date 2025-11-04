@@ -1,8 +1,8 @@
-name: 🐍 Snake Generator — Aditya Singh Edition v2 (Rainbow Mode)
+name: 🐍 Cyberpunk Snake Generator — Aditya Singh Edition v3
 
 on:
   schedule:
-    - cron: "0 3 * * *"  # 🕒 Runs daily at 3 AM IST
+    - cron: "0 3 * * *"  # 🕒 Runs every day at 3 AM IST
   workflow_dispatch:      # 🎮 Manual trigger
   push:
     branches:
@@ -22,47 +22,82 @@ jobs:
 
       THEME_DARK: github-dark
       THEME_LIGHT: github-light
-      THEME_RAINBOW: github-dark-dimmed,github-light,github-dark,github
 
     steps:
       - name: 🧩 Checkout repository
         uses: actions/checkout@v4
 
-      - name: ⚡ Cache build data
+      - name: ⚡ Cache snake build data
         uses: actions/cache@v3
         with:
           path: ~/.cache/snk
-          key: ${{ runner.os }}-snk-cache
+          key: ${{ runner.os }}-cyber-snk-cache
 
-      - name: 🐍 Generate Snake SVGs (Dark + Light)
+      # ====== 1️⃣ Generate Base Snakes ======
+      - name: 🐍 Generate Base Snakes (Dark + Light)
         uses: Platane/snk@v3
         with:
           github_user_name: ${{ env.USERNAME }}
           outputs: |
             ${{ env.OUTPUT_DIR }}/snake-dark.svg?palette=${{ env.THEME_DARK }}
             ${{ env.OUTPUT_DIR }}/snake-light.svg?palette=${{ env.THEME_LIGHT }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 🌈 Generate Rainbow Gradient Snake
+      # ====== 2️⃣ Generate Rainbow Base ======
+      - name: 🌈 Generate Rainbow Snake Base
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ env.USERNAME }}
+          outputs: |
+            ${{ env.OUTPUT_DIR }}/snake-rainbow.svg
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # ====== 3️⃣ Apply Neon Cyberpunk Gradient ======
+      - name: 💫 Apply Neon Cyberpunk Colors
         run: |
-          mkdir -p ${{ env.OUTPUT_DIR }}
-          curl -s "https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake.svg" -o "${{ env.OUTPUT_DIR }}/snake-rainbow.svg"
-          sed -i 's/#39d353/#ff00ff/g; s/#26a641/#ff9900/g; s/#006d32/#00ffff/g' "${{ env.OUTPUT_DIR }}/snake-rainbow.svg"
-          echo "🎨 Rainbow gradient snake generated."
+          sed -i \
+          -e 's/#39d353/#ff00ff/g' \
+          -e 's/#26a641/#00ffff/g' \
+          -e 's/#006d32/#9400ff/g' \
+          -e 's/stroke="#40c463"/stroke="url(#neonGradient)"/g' \
+          "${{ env.OUTPUT_DIR }}/snake-rainbow.svg"
 
+          # Inject glowing gradient defs at top of file
+          sed -i '1i\
+          <defs>\
+            <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%">\
+              <stop offset="0%" stop-color="#00ffff">\
+                <animate attributeName="stop-color" values="#00ffff;#ff00ff;#00ffff" dur="4s" repeatCount="indefinite"/>\
+              </stop>\
+              <stop offset="100%" stop-color="#ff00ff">\
+                <animate attributeName="stop-color" values="#ff00ff;#00ffff;#ff00ff" dur="4s" repeatCount="indefinite"/>\
+              </stop>\
+            </linearGradient>\
+          </defs>' "${{ env.OUTPUT_DIR }}/snake-rainbow.svg"
+
+          echo "⚡ Cyberpunk neon gradient applied successfully!"
+
+      # ====== 4️⃣ Generate Animated GIF ======
       - name: 🎞️ Generate Animated GIF Snake
         uses: Platane/snk@v3
         with:
           github_user_name: ${{ env.USERNAME }}
           outputs: |
             ${{ env.OUTPUT_DIR }}/snake.gif
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      # ====== 5️⃣ Random Commit Message ======
       - name: ✨ Generate random emoji commit message
         id: commitmsg
         run: |
-          msgs=("🐍 Slithering rainbow snake" "🌈 Vibrant snake regenerated" "🔥 Neon trails activated" "🧠 Matrix-style grid refresh" "⚡ Shiny new commit paths")
+          msgs=("💫 Cyberpunk glow snake" "🌈 Neon pulse slithering" "⚡ Grid lightning effect" "🔥 RGB snake unleashed" "🧬 Matrix serpent reborn")
           echo "message=${msgs[$RANDOM % ${#msgs[@]}]}" >> $GITHUB_OUTPUT
 
-      - name: 🚀 Deploy Snakes to output branch
+      # ====== 6️⃣ Push to output branch ======
+      - name: 🚀 Deploy to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
@@ -71,13 +106,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      # ====== 7️⃣ Fancy Console Output ======
       - name: 🎉 Final Log Output
         run: |
-          echo "=============================="
-          echo "🐍 Snake Animation Generated!"
-          echo "👤 User: ${{ env.USERNAME }}"
-          echo "🌈 Versions: Dark, Light, Rainbow, GIF"
-          echo "🚀 Pushed to: output branch"
-          echo "🎨 Live preview:"
-          echo "  🔗 https://raw.githubusercontent.com/${{ env.USERNAME }}/${{ env.USERNAME }}/output/snake-rainbow.svg"
-          echo "=============================="
+          echo "========================================"
+          echo "🐍  CYBERPUNK SNAKE GENERATED SUCCESSFULLY"
+          echo "👤  USER: ${{ env.USERNAME }}"
+          echo "🎨  THEMES: Dark, Light, Rainbow, Cyberpunk Neon"
+          echo "🌈  OUTPUT: ${{ env.OUTPUT_DIR }}/"
+          echo "🚀  PUSHED TO: output branch"
+          echo "🔗  PREVIEW: https://raw.githubusercontent.com/${{ env.USERNAME }}/${{ env.USERNAME }}/output/snake-rainbow.svg"
+          echo "⚡  Stay luminous, coder!"
+          echo "========================================"
