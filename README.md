@@ -43,22 +43,16 @@
 
 ---
 
-<!-- Cyberpunk Snake Animation -->
-<p align="center">
-  <img src="https://raw.githubusercontent.com/adityasinnghh/adityasinnghh/output/snake-rainbow.svg" 
-       alt="Cyberpunk Snake Animation" 
-       width="100%" />
-</p>
-
+<h3 align="center">🐍 Contribution Snake</h3>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Status-Auto%20Updated%20Every%206h-39FF14?style=for-the-badge&logo=githubactions&logoColor=black" />
-  <img src="https://img.shields.io/badge/Theme-Cyberpunk%20Neon-FF00FF?style=for-the-badge&logo=github&logoColor=black" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/adityasinnghh/adityasinnghh/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/adityasinnghh/adityasinnghh/output/github-contribution-grid-snake-light.svg" />
+    <img alt="Snake animation" src="https://raw.githubusercontent.com/adityasinnghh/adityasinnghh/output/github-contribution-grid-snake.svg" />
+  </picture>
 </p>
 
-<p align="center">
-  <em>⚡ Watch as my contribution graph comes alive with glowing neon snakes, generated automatically every 6 hours by GitHub Actions.</em>
-</p>
 
 
 
