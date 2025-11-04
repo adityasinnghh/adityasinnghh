@@ -21,6 +21,7 @@ jobs:
         run: |
           echo "USERNAME=${GITHUB_REPOSITORY_OWNER}" >> $GITHUB_ENV
           echo "OUTPUT_DIR=dist" >> $GITHUB_ENV
+          echo "BUILD_DIR=build" >> $GITHUB_ENV
 
       - name: 🐍 Generate Base Snake SVGs
         uses: Platane/snk@v3
@@ -31,22 +32,25 @@ jobs:
             ${{ env.OUTPUT_DIR }}/snake-dark.svg?palette=github-dark
             ${{ env.OUTPUT_DIR }}/snake-light.svg?palette=github-light
 
-      - name: 🪄 Apply Cyberpunk Rainbow Glow
+      - name: 🪄 Create Cyberpunk Rainbow Glow Version
         run: |
           echo "🎨 Applying neon glow gradient to the snake..."
+          
+          # Create writable build directory
+          mkdir -p $BUILD_DIR
+          
+          # Copy read-only SVG to writable location
+          cp dist/snake.svg $BUILD_DIR/snake-rainbow.svg || true
 
-          mkdir -p dist
-          cp dist/snake.svg dist/snake-rainbow.svg
-
-          # Apply glowing gradient — no chmod needed
+          # Apply glowing neon theme
           sed -i \
             -e 's/#39d353/#ff00ff/g' \
             -e 's/#26a641/#00ffff/g' \
             -e 's/#006d32/#9400ff/g' \
             -e 's/stroke="#40c463"/stroke="url(#neonGradient)"/g' \
-            "dist/snake-rainbow.svg"
+            "$BUILD_DIR/snake-rainbow.svg"
 
-          # Inject animated gradient at the top
+          # Inject animated gradient definition
           sed -i '1i\
           <defs>\
             <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%">\
@@ -57,15 +61,15 @@ jobs:
                 <animate attributeName="stop-color" values="#ff00ff;#00ffff;#ff00ff" dur="4s" repeatCount="indefinite"/>\
               </stop>\
             </linearGradient>\
-          </defs>' "dist/snake-rainbow.svg"
+          </defs>' "$BUILD_DIR/snake-rainbow.svg"
 
           echo "⚡ Cyberpunk neon gradient applied successfully!"
-          ls -la dist
+          ls -la $BUILD_DIR
 
-      - name: 🚀 Push Snake to GitHub
+      - name: 🚀 Deploy Snake to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
-          build_dir: dist
+          build_dir: build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
