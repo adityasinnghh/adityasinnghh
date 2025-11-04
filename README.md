@@ -45,10 +45,11 @@
 
 <!-- Cyberpunk Snake Animation -->
 <p align="center">
-  <img src="https://github.com/adityasinnghh/adityasinnghh/blob/output/snake-rainbow.svg" 
+  <img src="https://raw.githubusercontent.com/adityasinnghh/adityasinnghh/output/snake-rainbow.svg" 
        alt="Cyberpunk Snake Animation" 
        width="100%" />
 </p>
+
 
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Auto%20Updated%20Every%206h-39FF14?style=for-the-badge&logo=githubactions&logoColor=black" />
