@@ -21,11 +21,8 @@ jobs:
         run: |
           echo "USERNAME=${GITHUB_REPOSITORY_OWNER}" >> $GITHUB_ENV
           echo "OUTPUT_DIR=dist" >> $GITHUB_ENV
-          echo "THEME_DARK=github-dark" >> $GITHUB_ENV
-          echo "THEME_LIGHT=github-light" >> $GITHUB_ENV
-          echo "THEME_RAINBOW=github-dark-dimmed,github-light,github-dark,github" >> $GITHUB_ENV
 
-      - name: 🐍 Generate Base Snake SVG
+      - name: 🐍 Generate Base Snake SVGs
         uses: Platane/snk@v3
         with:
           github_user_name: ${{ env.USERNAME }}
@@ -37,12 +34,11 @@ jobs:
       - name: 🪄 Apply Cyberpunk Rainbow Glow
         run: |
           echo "🎨 Applying neon glow gradient to the snake..."
+
           mkdir -p dist
-          chmod -R 777 dist
+          cp dist/snake.svg dist/snake-rainbow.svg
 
-          curl -s "https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake.svg" -o "dist/snake-rainbow.svg"
-
-          # Modify the SVG colors to glowing cyberpunk tones
+          # Apply glowing gradient — no chmod needed
           sed -i \
             -e 's/#39d353/#ff00ff/g' \
             -e 's/#26a641/#00ffff/g' \
@@ -50,7 +46,7 @@ jobs:
             -e 's/stroke="#40c463"/stroke="url(#neonGradient)"/g' \
             "dist/snake-rainbow.svg"
 
-          # Inject animated gradient at top of SVG
+          # Inject animated gradient at the top
           sed -i '1i\
           <defs>\
             <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%">\
@@ -64,12 +60,7 @@ jobs:
           </defs>' "dist/snake-rainbow.svg"
 
           echo "⚡ Cyberpunk neon gradient applied successfully!"
-
-      - name: 🔍 Verify SVG Output
-        run: |
-          echo "Checking SVG files generated in dist/"
           ls -la dist
-          file dist/snake-rainbow.svg || true
 
       - name: 🚀 Push Snake to GitHub
         uses: crazy-max/ghaction-github-pages@v4
