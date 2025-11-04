@@ -1,11 +1,21 @@
-<h1 align="center">👋 Hi, I'm Aditya Singh</h1>
+<h1 align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&pause=1000&color=00FFFF&center=true&vCenter=true&width=500&lines=👋+Hello%2C+I'm+Aditya+Singh!" alt="Typing SVG" />
+</h1>
+
 <h3 align="center">💻 Passionate Web Developer | Creative Technologist | Android Developer</h3>
 
 <p align="center">
-  <a href="https://github.com/adityasinnghh"><img src="https://img.shields.io/github/followers/adityasinnghh?label=Follow&style=social" alt="GitHub Badge"/></a>
-  <a href="mailto:adityasinnghh@gmail.com"><img src="https://img.shields.io/badge/Contact-Me-blue?style=flat&logo=gmail" alt="Gmail Badge"/></a>
-  <a href="https://www.linkedin.com/in/adityasinnghh/"><img src="https://img.shields.io/badge/LinkedIn-Aditya_Singh-blue?style=flat&logo=linkedin" alt="LinkedIn Badge"/></a>
+  <a href="https://github.com/adityasinnghh">
+    <img src="https://img.shields.io/github/followers/adityasinnghh?label=Follow&style=social" alt="GitHub Badge"/>
+  </a>
+  <a href="mailto:adityasinnghh@gmail.com">
+    <img src="https://img.shields.io/badge/Contact-Me-blue?style=flat&logo=gmail" alt="Gmail Badge"/>
+  </a>
+  <a href="https://www.linkedin.com/in/adityasinnghh/">
+    <img src="https://img.shields.io/badge/LinkedIn-Aditya_Singh-blue?style=flat&logo=linkedin" alt="LinkedIn Badge"/>
+  </a>
 </p>
+
 
 ---
 
