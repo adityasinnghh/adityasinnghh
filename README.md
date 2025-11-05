@@ -3,7 +3,7 @@
 
 <h3 align="center">💻 Passionate Web Developer | Creative Technologist | Android Developer</h3>
 
-<p align="center">
+<p align="center"> 
   <a href="https://github.com/adityasinnghh">
     <img src="https://img.shields.io/github/followers/adityasinnghh?label=Follow&style=social" alt="GitHub Badge"/>
   </a>
