@@ -89,13 +89,10 @@ I'm a passionate developer focused on creating **elegant, scalable, and user-cen
 
 ### 📊 GitHub Stats & Analytics
 
-<div align="center">
-
-| ⚡ GitHub Stats | 💻 Top Languages |
-|-----------------|-----------------|
-| ![Aditya's GitHub stats](https://github-readme-stats.vercel.app/api?username=adityasinnghh&show_icons=true&theme=radical&hide_border=true&count_private=true) | ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=adityasinnghh&layout=compact&theme=radical&hide_border=true) |
-
-</div>
+<p align="center">
+  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=adityasinnghh&show_icons=true&theme=radical&hide_border=true&count_private=true" alt="GitHub Stats"/>
+  <img width="48%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=adityasinnghh&layout=compact&theme=radical&hide_border=true" alt="Top Languages"/>
+</p>
 
 ---
 
