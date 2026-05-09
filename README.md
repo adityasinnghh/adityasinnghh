@@ -90,9 +90,25 @@ I'm a passionate developer focused on creating **elegant, scalable, and user-cen
 ### 📊 GitHub Stats & Analytics
 
 <p align="center">
-  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=adityasinnghh&show_icons=true&theme=radical&hide_border=true&count_private=true" alt="GitHub Stats"/>
-  <img width="48%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=adityasinnghh&layout=compact&theme=radical&hide_border=true" alt="Top Languages"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=adityasinnghh&show_icons=true&theme=radical&hide_border=true&count_private=true" alt="GitHub Stats"/>
 </p>
+
+---
+
+### 💻 Top Languages & Skills Breakdown
+
+<div align="center">
+
+| Language | Level | Usage |
+|----------|-------|-------|
+| **JavaScript** | ⭐⭐⭐⭐⭐ | Frontend Development, React, Node.js |
+| **Python** | ⭐⭐⭐⭐ | Backend, Scripting, Data Processing |
+| **Kotlin** | ⭐⭐⭐⭐ | Android Development, Mobile Apps |
+| **HTML/CSS** | ⭐⭐⭐⭐⭐ | Web Development, Responsive Design |
+| **TypeScript** | ⭐⭐⭐⭐ | Type-safe JavaScript, Next.js |
+| **SQL** | ⭐⭐⭐⭐ | Database Design, Queries |
+
+</div>
 
 ---
 
@@ -101,6 +117,21 @@ I'm a passionate developer focused on creating **elegant, scalable, and user-cen
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=adityasinnghh&theme=react-dark&bg_color=000000&color=39d353&line=39d353&point=FFFFFF" alt="GitHub Activity Graph" />
 </p>
+
+---
+
+### 🎯 Contribution Statistics
+
+<div align="center">
+
+- **Total Repositories**: 25+
+- **Public Projects**: Active Development
+- **Commits**: 500+
+- **Pull Requests**: 100+
+- **Issues Closed**: 50+
+- **Contributions**: Consistent Daily Commits
+
+</div>
 
 ---
 
