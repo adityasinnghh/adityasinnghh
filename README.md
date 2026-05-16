@@ -76,17 +76,17 @@ class Developer {
 <br/>
 
 <!-- GitHub Stats Card -->
-<img src="https://github-readme-stats.vercel.app/api?username=adityasinnghh&show_icons=true&theme=radical&hide_border=true&count_private=true" alt="GitHub Stats"/>
+<img src="https://github-readme-stats-sigma-five.vercel.app/api?username=adityasinnghh&show_icons=true&theme=radical&hide_border=true&count_private=true" alt="GitHub Stats"/>
 
 <br/>
 
 <!-- Top Languages Card -->
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=adityasinnghh&layout=compact&theme=radical&hide_border=true&langs_count=8" alt="Top Languages"/>
+<img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=adityasinnghh&layout=compact&theme=radical&hide_border=true&langs_count=8" alt="Top Languages"/>
 
 <br/>
 
 <!-- GitHub Activity Graph -->
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=adityasinnghh&theme=radical&hide_border=true" alt="GitHub Activity Graph"/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=adityasinnghh&theme=radical&hide_border=true&bg_color=00000000" alt="GitHub Activity Graph"/>
 
 </div>
 
@@ -260,7 +260,7 @@ I'm open to:
 
 ![Profile Views](https://komarev.com/ghpvc/?username=adityasinnghh&color=blueviolet&style=flat-square&label=Profile+Views)
 
-**Made by Aditya Singh** | *Last Updated: 2026-05-16*
+**Made  by Aditya** | *Last Updated: 2026-05-16*
 
 </div>
 
