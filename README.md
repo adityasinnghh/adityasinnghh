@@ -12,15 +12,16 @@
 
 I'm a **passionate developer** crafting elegant solutions to complex problems. With a deep love for clean code and innovative technologies, I'm constantly pushing the boundaries of what's possible in software development.
 
-```python
-class Developer:
-    def __init__(self):
-        self.name = "Aditya"
-        self.passion = "Building impactful software"
-        self.status = "Always learning 🚀"
-    
-    def skills(self):
-        return ["Problem Solving", "Innovation", "Collaboration", "Persistence"]
+```kotlin
+class Developer {
+    val name = "Aditya"
+    val passion = "Building impactful software"
+    val status = "Always learning 🚀"
+
+    fun skills(): List<String> {
+        return listOf("Problem Solving", "Innovation", "Collaboration", "Persistence")
+    }
+}
 ```
 
 ---
@@ -70,16 +71,22 @@ class Developer:
 <div align="center">
 
 <!-- GitHub Streak Stats -->
-<img src="https://streak-stats.demolab.com?user=adityasinnghh&theme=radical&hide_border=true&background=00000000" alt="GitHub Streak"/>
+<img src="https://streak-stats.demolab.com?user=adityasinnghh&theme=radical&hide_border=true" alt="GitHub Streak"/>
+
+<br/>
 
 <!-- GitHub Stats Card -->
-<img src="https://github-readme-stats.vercel.app/api?username=adityasinnghh&show_icons=true&theme=radical&hide_border=true&count_private=true&bg_color=00000000" alt="GitHub Stats"/>
+<img src="https://github-readme-stats.vercel.app/api?username=adityasinnghh&show_icons=true&theme=radical&hide_border=true&count_private=true" alt="GitHub Stats"/>
+
+<br/>
 
 <!-- Top Languages Card -->
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=adityasinnghh&layout=compact&theme=radical&hide_border=true&bg_color=00000000" alt="Top Languages"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=adityasinnghh&layout=compact&theme=radical&hide_border=true&langs_count=8" alt="Top Languages"/>
+
+<br/>
 
 <!-- GitHub Activity Graph -->
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=adityasinnghh&theme=radical&hide_border=true&bg_color=00000000" alt="GitHub Activity Graph"/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=adityasinnghh&theme=radical&hide_border=true" alt="GitHub Activity Graph"/>
 
 </div>
 
@@ -253,7 +260,7 @@ I'm open to:
 
 ![Profile Views](https://komarev.com/ghpvc/?username=adityasinnghh&color=blueviolet&style=flat-square&label=Profile+Views)
 
-**Made with ❤️ by Aditya** | *Last Updated: 2026-05-16*
+**Made by Aditya Singh** | *Last Updated: 2026-05-16*
 
 </div>
 
