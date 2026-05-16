@@ -68,15 +68,31 @@ class Developer:
 ## 📊 GitHub Statistics
 
 <div align="center">
-  
-[![GitHub Streak](https://streak-stats.demolab.com?user=adityasinnghh&theme=radical&hide_border=true)](https://git.io/streak-stats)
 
-[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=adityasinnghh&show_icons=true&theme=radical&hide_border=true&count_private=true)](https://github.com/adityasinnghh)
+<!-- GitHub Streak Stats -->
+<img src="https://streak-stats.demolab.com?user=adityasinnghh&theme=radical&hide_border=true&background=00000000" alt="GitHub Streak"/>
 
-[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=adityasinnghh&layout=compact&theme=radical&hide_border=true)](https://github.com/adityasinnghh)
+<!-- GitHub Stats Card -->
+<img src="https://github-readme-stats.vercel.app/api?username=adityasinnghh&show_icons=true&theme=radical&hide_border=true&count_private=true&bg_color=00000000" alt="GitHub Stats"/>
 
-[![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=adityasinnghh&theme=radical&hide_border=true)](https://github.com/adityasinnghh)
+<!-- Top Languages Card -->
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=adityasinnghh&layout=compact&theme=radical&hide_border=true&bg_color=00000000" alt="Top Languages"/>
 
+<!-- GitHub Activity Graph -->
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=adityasinnghh&theme=radical&hide_border=true&bg_color=00000000" alt="GitHub Activity Graph"/>
+
+</div>
+
+---
+
+## 🐍 Contribution Snake Animation
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/adityasinnghh/adityasinnghh/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/adityasinnghh/adityasinnghh/output/github-contribution-grid-snake-light.svg" />
+    <img alt="Snake Animation" src="https://raw.githubusercontent.com/adityasinnghh/adityasinnghh/output/github-contribution-grid-snake.svg" />
+  </picture>
 </div>
 
 ---
