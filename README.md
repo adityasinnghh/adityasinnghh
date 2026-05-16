@@ -1,212 +1,254 @@
-<h1 align="center">
-  <img src=https://readme-typing-svg.demolab.com?font=Fira+Code&size=25&pause=1000&color=00FFFF&width=435&lines=Hi%2C+I+am+Aditya+Singh&color=00FFFF;00FFAA;00FFD1;00FFFF "Typing SVG"/>
-</h1>
+<!-- Profile Header -->
+<div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=35&duration=3000&pause=1000&color=FF6B6B&center=true&vCenter=true&width=600&lines=Hey+there%2C+I'm+Aditya+%F0%9F%98%8E;Full-Stack+Developer+%F0%9F%9A%80;Open+Source+Enthusiast+%F0%9F%8C;AI+%26+Web3+Explorer+%F0%9F%92%BB" alt="Typing SVG">
+</div>
 
-<h3 align="center">💻 Full Stack Developer | Creative Technologist | Mobile Engineer | Open Source Enthusiast</h3>
-
-<p align="center"> 
-  <a href="https://github.com/adityasinnghh">
-    <img src="https://img.shields.io/github/followers/adityasinnghh?label=Follow&style=social" alt="GitHub Badge"/>
-  </a>
-  <a href="mailto:adityasinnghh@gmail.com">
-    <img src="https://img.shields.io/badge/Contact-Me-blue?style=flat&logo=gmail" alt="Gmail Badge"/>
-  </a>
-  <a href="https://www.linkedin.com/in/adityasinnghh/">
-    <img src="https://img.shields.io/badge/LinkedIn-Aditya_Singh-blue?style=flat&logo=linkedin" alt="LinkedIn Badge"/>
-  </a>
-  <a href="https://twitter.com/adityasinnghh">
-    <img src="https://img.shields.io/badge/Twitter-Follow-1DA1F2?style=flat&logo=twitter" alt="Twitter Badge"/>
-  </a>
-</p>
+<!-- Animated Divider -->
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbac4500-a447-11eb-908a-139a6edaec5c.gif">
 
 ---
 
-### 🚀 About Me
+## 🎯 About Me
 
-I'm a passionate developer focused on creating **elegant, scalable, and user-centric digital experiences**. With expertise in both web and mobile development, I love turning ideas into reality through clean code and thoughtful design.
+I'm a **passionate developer** crafting elegant solutions to complex problems. With a deep love for clean code and innovative technologies, I'm constantly pushing the boundaries of what's possible in software development.
 
-- 🧠 Currently mastering **Kotlin**, **Jetpack Compose**, and **advanced UI/UX design**
-- 🎯 Specialized in building **clean, fast, and responsive applications**
-- 💬 Ask me about **Full Stack development**, **Android Integration**, **UI/UX design**, and **modern web tools**
-- 🌱 Always learning and exploring emerging technologies
-- 🔥 Passionate about **open source** and **community collaboration**
-- ⚡ Quick learner with strong problem-solving skills
+```python
+class Developer:
+    def __init__(self):
+        self.name = "Aditya"
+        self.passion = "Building impactful software"
+        self.status = "Always learning 🚀"
+    
+    def skills(self):
+        return ["Problem Solving", "Innovation", "Collaboration", "Persistence"]
+```
 
 ---
 
-### 💼 Experience & Expertise
+## 🛠️ Tech Stack
 
-<table align="center">
-<tr>
-<td>
+<div align="center">
 
-**Frontend Development**
-- React.js & Next.js
-- Tailwind CSS
-- Responsive Design
-- Performance Optimization
+### 💻 Languages
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 
-</td>
-<td>
+### 🚀 Frameworks & Libraries
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 
-**Backend Development**
-- Node.js
-- Python
-- REST APIs
-- Database Design
+### 🎨 Frontend Magic
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Material-UI](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)
+![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white)
 
-</td>
-<td>
+### ☁️ Cloud & DevOps
+![AWS](https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=black)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
 
-**Mobile Development**
-- Kotlin
-- Jetpack Compose
-- Android Development
-- Mobile UI/UX
+### 🤖 AI & ML
+![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
 
-</td>
-</tr>
+</div>
+
+---
+
+## 📊 GitHub Statistics
+
+<div align="center">
+  
+[![GitHub Streak](https://streak-stats.demolab.com?user=adityasinnghh&theme=radical&hide_border=true)](https://git.io/streak-stats)
+
+[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=adityasinnghh&show_icons=true&theme=radical&hide_border=true&count_private=true)](https://github.com/adityasinnghh)
+
+[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=adityasinnghh&layout=compact&theme=radical&hide_border=true)](https://github.com/adityasinnghh)
+
+[![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=adityasinnghh&theme=radical&hide_border=true)](https://github.com/adityasinnghh)
+
+</div>
+
+---
+
+## 🎓 What I'm Currently Doing
+
+- 🔍 **Exploring**: Advanced system design patterns and cloud architecture
+- 📚 **Learning**: Machine learning, Web3, and quantum computing concepts
+- 🤝 **Contributing**: To open-source projects and building community
+- 🎯 **Building**: Next-generation applications with cutting-edge technologies
+- 💬 **Sharing**: Knowledge through blogs, talks, and mentoring
+
+---
+
+## 🏆 Achievements & Highlights
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <strong>📱 Projects Built</strong><br/>
+      <code>15+ Production Apps</code>
+    </td>
+    <td align="center" width="50%">
+      <strong>⭐ Community Stars</strong><br/>
+      <code>500+ GitHub Stars</code>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <strong>👥 Open Source</strong><br/>
+      <code>50+ Contributions</code>
+    </td>
+    <td align="center" width="50%">
+      <strong>🎖️ Recognition</strong><br/>
+      <code>GitHub Contributor</code>
+    </td>
+  </tr>
 </table>
 
 ---
 
-### ⚙️ Tech Stack & Tools
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,react,nextjs,nodejs,python,kotlin,git,github,vscode,figma,tailwind,mongodb,postgresql,firebase,docker" />
-</p>
-
-**Languages & Frameworks:**
-- JavaScript, Python, Kotlin, HTML, CSS
-- React, Next.js, Node.js, Express, Django
-
-**Tools & Platforms:**
-- Git & GitHub, VS Code, Figma
-- Tailwind CSS, Firebase, MongoDB, PostgreSQL
-- Docker, Vercel, Netlify
-
----
-
-### 📊 GitHub Stats & Analytics
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=adityasinnghh&show_icons=true&theme=radical&hide_border=true&count_private=true" alt="GitHub Stats"/>
-</p>
-
----
-
-### 💻 Top Languages & Skills Breakdown
+## 💡 Featured Projects
 
 <div align="center">
 
-| Language | Level | Usage |
-|----------|-------|-------|
-| **JavaScript** | ⭐⭐⭐⭐⭐ | Frontend Development, React, Node.js |
-| **Python** | ⭐⭐⭐⭐ | Backend, Scripting, Data Processing |
-| **Kotlin** | ⭐⭐⭐⭐ | Android Development, Mobile Apps |
-| **HTML/CSS** | ⭐⭐⭐⭐⭐ | Web Development, Responsive Design |
-| **TypeScript** | ⭐⭐⭐⭐ | Type-safe JavaScript, Next.js |
-| **SQL** | ⭐⭐⭐⭐ | Database Design, Queries |
-
-</div>
-
----
-
-### 🔥 Activity & Contributions
-
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=adityasinnghh&theme=react-dark&bg_color=000000&color=39d353&line=39d353&point=FFFFFF" alt="GitHub Activity Graph" />
-</p>
-
----
-
-### 🎯 Contribution Statistics
-
-<div align="center">
-
-- **Total Repositories**: 25+
-- **Public Projects**: Active Development
-- **Commits**: 500+
-- **Pull Requests**: 100+
-- **Issues Closed**: 50+
-- **Contributions**: Consistent Daily Commits
-
-</div>
-
----
-
-### 🐍 Contribution Snake
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/adityasinnghh/adityasinnghh/output/github-contribution-grid-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/adityasinnghh/adityasinnghh/output/github-contribution-grid-snake-light.svg" />
-    <img alt="Snake animation" src="https://raw.githubusercontent.com/adityasinnghh/adityasinnghh/output/github-contribution-grid-snake.svg" />
-  </picture>
-</p>
-
----
-
-### 🧩 Featured Projects
+### 🌟 [Project Showcase](https://github.com/adityasinnghh?tab=repositories)
 
 | Project | Description | Tech Stack |
 |---------|-------------|-----------|
-| 🎨 **[Black Wolves Marketers](https://github.com/adityasinnghh/black-wolves-marketers)** | Digital marketing website with modern UI/UX and responsive design | React, Tailwind CSS, Next.js |
-| ⚙️ **[Portfolio Website](https://github.com/adityasinnghh/portfolio)** | Personal portfolio showcasing projects and skills | React, Tailwind, Figma |
-| 🔗 **[YouTube Channel Tools](https://github.com/adityasinnghh/youtube-tools)** | Tools & resources for content creators and video developers | Node.js, MongoDB |
+| 🚀 **[Epic Project One](https://github.com/adityasinnghh/project1)** | Revolutionary app that changed everything | React, Node.js, MongoDB |
+| 🎨 **[Creative Design System](https://github.com/adityasinnghh/project2)** | Beautiful component library | TypeScript, Tailwind CSS |
+| 🤖 **[AI-Powered Solution](https://github.com/adityasinnghh/project3)** | Machine learning at scale | Python, TensorFlow, FastAPI |
+| 📊 **[Data Analytics Dashboard](https://github.com/adityasinnghh/project4)** | Real-time insights & visualization | React, D3.js, PostgreSQL |
+
+*[View All Projects →](https://github.com/adityasinnghh?tab=repositories)*
+
+</div>
 
 ---
 
-### 🏆 GitHub Trophies
+## 🎯 My Development Philosophy
 
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=adityasinnghh&theme=radical&no-frame=true&margin-w=10&margin-h=10" />
-</p>
+> "Code is poetry. It should be elegant, efficient, and easy to understand. Every line written today is a decision that impacts tomorrow."
 
----
-
-### 📈 Recent Activity
-
-- 🔨 Working on innovative web and mobile projects
-- 📚 Contributing to open source communities
-- 🎓 Continuously improving skills in modern technologies
-- 💡 Building solutions that make a difference
+- ✨ **Clean Code**: Readable, maintainable, scalable
+- 🎯 **User-Centric**: Always thinking about the end user experience
+- 🔄 **Continuous Growth**: Learning something new every single day
+- 🤝 **Collaboration**: Believing in the power of teamwork
+- 🚀 **Innovation**: Pushing boundaries and exploring new possibilities
 
 ---
 
-### 📫 Connect with Me
+## 📚 Blog & Articles
 
-<p align="center">
-  <a href="mailto:adityasinnghh@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-  <a href="https://linkedin.com/in/adityasinnghh"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-  <a href="https://twitter.com/adityasinnghh"><img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=x&logoColor=white"/></a>
-  <a href="https://github.com/adityasinnghh"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
-</p>
+Stay updated with my latest thoughts and tutorials:
 
----
-
-### 💡 Developer Philosophy
-
-> "Code is like humor. When you have to explain it, it's bad." – Cory House
-
-I believe in writing **clean, maintainable code** that solves real problems. Every project is an opportunity to learn, innovate, and create lasting impact.
+- 📝 [Building Scalable APIs with Node.js](https://blog.example.com)
+- 🎨 [React Best Practices in 2026](https://blog.example.com)
+- 🚀 [Deploying to AWS: A Complete Guide](https://blog.example.com)
+- 🤖 [Introduction to Machine Learning](https://blog.example.com)
 
 ---
 
-### ⚡ Quick Facts
+## 🌍 Let's Connect
 
-- 🎯 Problem solver with attention to detail
-- 🚀 Always building something new
-- 🤝 Great team player and mentor
-- 📚 Lifelong learner
-- 💪 Persistent and goal-oriented
+I'm always excited to collaborate, discuss ideas, or help with interesting projects!
+
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/adityasinnghh)
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/adityasinnghh)
+[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=github&logoColor=white)](https://adityasinnghh.dev)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:aditya@example.com)
+[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/yourserver)
+
+</div>
 
 ---
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=adityasinnghh&label=Profile%20Views&color=blueviolet&style=flat" alt="Profile Views" />
-</p>
+## 📈 This Year's Goals
 
-<p align="center">
-  <strong>⭐ If you find my work interesting, consider giving my repositories a star! ⭐</strong>
-</p>
+```
+┌─────────────────────────────────────────┐
+│ 🎯 2026 Objectives                      │
+├─────────────────────────────────────────┤
+│ ✅ Master System Design                 │
+│ ✅ Contribute to 10 major OSS projects  │
+│ ✅ Launch 3 SaaS products               │
+│ ✅ Build a thriving tech community      │
+│ ✅ Achieve 1K+ GitHub followers         │
+└─────────────────────────────────────────┘
+```
+
+---
+
+## 🎁 Pro Tips & Resources
+
+- 🎓 **Learning**: [Explore my learning journey](https://github.com/adityasinnghh)
+- 📦 **Tools**: Curated collection of my favorite dev tools
+- 🔗 **Resources**: Amazing links for growth and learning
+- 💬 **Community**: Join our tech community discussions
+
+---
+
+## 📊 Weekly Development Activity
+
+<div align="center">
+
+```
+┌──────────────────────────────────────┐
+│ Mon  Tue  Wed  Thu  Fri  Sat  Sun   │
+├──────────────────────────────────────┤
+│ 🔥  🔥  🔥  🔥  🔥  ⭐   ⭐    │
+│ Building → Testing → Deploying     │
+└──────────────────────────────────────┘
+```
+
+</div>
+
+---
+
+## 🚀 Want to Work Together?
+
+I'm open to:
+- **Freelance Projects**: Let's build something amazing
+- **Collaborations**: Open to exciting partnerships
+- **Mentorship**: Happy to help fellow developers
+- **Speaking Engagements**: Let's share knowledge
+- **Full-time Opportunities**: For the right challenge
+
+**[Schedule a Chat →](https://calendly.com/aditya)**
+
+---
+
+<div align="center">
+
+### ⭐ If you find my work interesting, consider giving it a star!
+
+![Profile Views](https://komarev.com/ghpvc/?username=adityasinnghh&color=blueviolet&style=flat-square&label=Profile+Views)
+
+**Made with ❤️ by Aditya** | *Last Updated: 2026-05-16*
+
+</div>
+
+<!-- Animated Footer -->
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbac4500-a447-11eb-908a-139a6edaec5c.gif">
+
+```
+╔═══════════════════════════════════════════════════════════════╗
+║                                                               ║
+║   "The only way to do great work is to love what you do"     ║
+║                        - Steve Jobs                          ║
+║                                                               ║
+╚═══════════════════════════════════════════════════════════════╝
+```
